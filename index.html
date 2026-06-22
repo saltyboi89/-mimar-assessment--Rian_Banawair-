@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mimar Tech — 3D Assessment</title>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body { background: #0a0a0f; overflow: hidden; }
+      canvas { display: block; width: 100vw; height: 100vh; }
+      #ui {
+        position: fixed; top: 20px; left: 20px;
+        color: #8888aa; font-family: 'SF Mono', monospace; font-size: 12px;
+        pointer-events: none; line-height: 1.8;
+      }
+      #hovered {
+        position: fixed; bottom: 20px; left: 20px;
+        color: #aaaacc; font-family: 'SF Mono', monospace; font-size: 11px;
+        pointer-events: none; opacity: 0; transition: opacity 0.2s;
+      }
+      #hovered.visible { opacity: 1; }
+    </style>
+  </head>
+  <body>
+    <div id="ui">
+      MIMAR TECH — Floor Plan Renderer<br/>
+      500 instanced boxes · Custom shaders<br/>
+      Drag to orbit · Scroll to zoom
+    </div>
+    <div id="hovered" id="hovered">BOX #<span id="box-id">—</span></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
